@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">aula</string>
+    <string name="_0_anos">0 anos</string>
+    <string name="ol_seja_bem_vindo_ao_nosso_aplicativo">Olá, seja bem vindo ao nosso aplicativo.</string>
+    <string name="olá_seja_bem_vindo_ao_nosso_aplicativo" />
+    <string name="calculadora_de_idade">Calculadora de Idade</string>
+    <string name="por_favor_digite_sua_idade_em_anos">Por favor, digite sua idade (em anos):</string>
+    <string name="_25">25</string>
+    <string name="calcular">Calcular</string>
+</resources>
