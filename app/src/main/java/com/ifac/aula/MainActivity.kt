@@ -1,5 +1,6 @@
 package com.ifac.aula
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,19 +17,21 @@ class MainActivity : AppCompatActivity() {
         val button = findViewById<AppCompatButton>(R.id.action_button)
 
         button.setOnClickListener {
-            handleCalculateAge()
+            navigateToResult(getAgeInYears())
         }
     }
 
-    private fun handleCalculateAge() {
-        val ageInYears: Int = findViewById<EditText>(R.id.input).text.toString().toInt()
-        val ageInDays: Int = calculateAge(ageInYears)
+    fun navigateToResult(ageInYears: Int) {
+        Toast.makeText(this, ageInYears.toString(), Toast.LENGTH_SHORT).show()
 
-        val result = findViewById<TextView>(R.id.result)
-        result.text = "$ageInDays Dias"
+        startActivity(Intent(this, Result::class.java).apply {
+            // you can add values(if any) to pass to the next class or avoid using `.apply`
+            putExtra("ageInYears", ageInYears.toString())
+        })
     }
 
-    private fun calculateAge(ageInYears: Int): Int {
-        return ageInYears * 365
+    private fun getAgeInYears(): Int {
+        val ageInYears: Int = findViewById<EditText>(R.id.input).text.toString().toInt()
+        return ageInYears
     }
 }
