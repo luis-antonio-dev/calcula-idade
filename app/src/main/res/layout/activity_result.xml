@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/go_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,4 +40,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result_days" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/history_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:width="200dp"
+        android:text="Historico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go_back" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun navigateToResult(ageInYears: Int) {
-        Toast.makeText(this, ageInYears.toString(), Toast.LENGTH_SHORT).show()
-
         startActivity(Intent(this, Result::class.java).apply {
             // you can add values(if any) to pass to the next class or avoid using `.apply`
             putExtra("ageInYears", ageInYears.toString())
